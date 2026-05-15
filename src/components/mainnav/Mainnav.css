@@ -1,43 +1,105 @@
-.main-nav{
+.main-nav-container {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.main-nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
-    background: linear-gradient(to bottom,#e0e0e2, #fafafa, white);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
 }
 
-.main-nav-logo{
+.main-nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav-logo-img {
+    height: 60px; /* Adjust based on logo proportions */
+    object-fit: contain;
+}
+
+.main-nav-links {
     flex-grow: 1;
-    margin-left: 20px;
-    
+    display: flex;
+    justify-content: center;
 }
 
-.main-nav-logo-img{
-    width: 100px;
-    height: 100%;
-}
-
-.main-nav-ul{
-    display : flex;
-    justify-content: space-around;
-    flex-grow: 1;
-}
-
-.main-nav-li{
+.main-nav-ul {
+    display: flex;
     list-style: none;
-    display: flex;
-    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+
+.main-nav-li {
     text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s;
 }
 
-.main-nav-li:hover{
-    cursor: pointer;
-    background-color: red;
+.main-nav-li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #021d49;
+    transition: width 0.3s ease;
+}
+
+.main-nav-li:hover, .main-nav-li.active {
+    color: #021d49;
+}
+
+.main-nav-li:hover::after, .main-nav-li.active::after {
+    width: 100%;
+}
+
+.main-nav-quote-btn {
+    display: flex;
+    align-items: center;
+}
+
+.nav-quote-link {
+    background-color: #021d49;
     color: white;
-    width: 20%;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.main-nav-li:active{
-    font-weight: 800;
-    color: #202c62;
+.nav-quote-link:hover {
+    background-color: #004a99;
+    transform: translateY(-2px);
 }
 
+@media (max-width: 900px) {
+    .main-nav-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .main-nav-ul {
+        gap: 20px;
+    }
+    
+    .main-nav-quote-btn {
+        display: none; /* Hide on small screens for cleaner look or move to menu */
+    }
+}

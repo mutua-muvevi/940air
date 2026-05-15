@@ -8,17 +8,15 @@ const Ground = () => {
         <div className="Ground">
             <Mainnav/>
 
-            <h2>I am the Ground Component</h2>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the
-                1500s, when an unknown printer took a galley of type and scrambled it to
-                make a type specimen book. It has survived not only five centuries, but
-                also the leap into electronic typesetting, remaining essentially
-                unchanged. It was popularised in the 1960s with the release of Letraset
-                sheets containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
+            <h2>Trucking & Ground Logistics</h2>
+            <div className="service-details">
+                <p>
+                    Our ground transportation division offers flexible and reliable trucking services across East Africa and neighboring regions. Whether it's a dedicated full truckload (FTL) or a less-than-truckload (LTL) shipment, we have the fleet to accommodate your needs.
+                </p>
+                <p>
+                    We provide meticulous route planning and real-time tracking, ensuring secure transit from pick-up to the final destination. Let us handle the complexities of cross-border customs and regional road networks.
+                </p>
+            </div>
             <Footer/>
         </div>
     )

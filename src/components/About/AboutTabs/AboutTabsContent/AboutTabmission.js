@@ -8,17 +8,13 @@ const AboutTabmission = () => {
                 Our mission
             </h2>
             <p className="about-tab-contents-p">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the
-                1500s, when an unknown printer took a galley of type and scrambled it to
-                make a type specimen book.
-                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                940 Air Cargo provides logistical solutions to local exporters, importers, and international organizations within Africa and globally. We strive to be the bridge that connects African businesses to the world.
             </p>
             <ul>
-                <li>Mission statement 1</li>
-                <li>Mission statement 2</li>
-                <li>Mission statement 3</li>
-                <li>Mission statement 4</li>
+                <li>To provide seamless logistical support.</li>
+                <li>To ensure timely and safe delivery of cargo.</li>
+                <li>To build long-term relationships with our partners.</li>
+                <li>To be the leading logistics provider in the region.</li>
             </ul>
         </div>
     )

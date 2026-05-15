@@ -1,41 +1,125 @@
-.main-banner{
-    height: 83vh !important;
-    background-image: linear-gradient(to bottom, rgba(2, 12, 70, 0.363), rgba(17, 8, 102, 0.582)),url(../../../assets/container.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
+.main-banner-carousel {
+    width: 100%;
+    /* Keep it roughly the same height as the old banner */
+    height: 83vh; 
+    overflow: hidden;
 }
 
-.main-banner-centered {
+.main-banner-carousel .carousel-root,
+.main-banner-carousel .carousel,
+.main-banner-carousel .carousel .slider-wrapper,
+.main-banner-carousel .carousel .slider {
+    height: 100%;
+}
+
+/* Enable fade transition for react-responsive-carousel */
+.main-banner-carousel .carousel .slider-wrapper {
+    transition: opacity 1s ease-in-out;
+}
+
+.main-banner-carousel .carousel .slider {
+    display: flex;
+}
+
+.main-banner-carousel .carousel .slide {
+    min-width: 100%;
+}
+
+.main-banner-carousel .carousel .slide img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-container {
+    height: 83vh;
+    position: relative;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 12, 70, 0.6); /* Slightly darker for better text contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.main-banner-h2 {
-    font-size: 50px;
-    font-weight: 800;
-    line-height: 0%;
-    font-family: 'Roboto', sans-serif;
+.slide-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 800px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.main-banner-h4 {
-    font-size: 30px;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-content h2 {
+    font-size: 3.5rem;
     font-weight: 800;
-    line-height: 0%;
+    margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.2;
+}
+
+.slide-content p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.slide-btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #004a99;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.slide-btn:hover {
+    background-color: #004a99;
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 850px) {
-    .main-banner{
-        height: 100vh;
+    .main-banner-carousel, .slide-container {
+        height: 80vh;
     }
-    .main-banner-centered{
-        width: 85%;
-        margin: auto;
+    
+    .slide-content h2 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
     }
-    .main-banner-h2{
-        font-size: 30px;
+
+    .slide-content p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+
+    .slide-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
     }
 }

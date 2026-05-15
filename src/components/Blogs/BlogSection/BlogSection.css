@@ -1,0 +1,106 @@
+.dedicated-blog-section {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.dedicated-blog-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dedicated-blog-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+}
+
+.dedicated-blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.dedicated-blog-card {
+    background-color: #fff;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.dedicated-blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.dedicated-blog-img-wrapper {
+    position: relative;
+    height: 220px;
+    width: 100%;
+}
+
+.dedicated-blog-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.dedicated-blog-card:hover .dedicated-blog-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.dedicated-blog-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--accent-red);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.dedicated-blog-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.dedicated-blog-date {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.dedicated-blog-content h3 {
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+}
+
+.dedicated-blog-content p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.dedicated-blog-readmore {
+    font-weight: bold;
+    color: var(--accent-blue);
+    font-size: 0.95rem;
+    transition: color var(--transition-fast);
+}
+
+.dedicated-blog-card:hover .dedicated-blog-readmore {
+    color: var(--primary-blue);
+}

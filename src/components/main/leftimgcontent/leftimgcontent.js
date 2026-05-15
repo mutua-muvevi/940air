@@ -1,30 +1,38 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import "./leftimgcontent.css"
 import truck from '../../../assets/truck-460432_1920.jpg'
 
-const leftimgcontent = () => {
+const Leftimgcontent = () => {
+    const navigate = useNavigate();
+
     return (
-        <div className="leftimgcontent">
-            <div className="the-left-img">
-                <img className="content-section-image" src={truck} alt="shipping"/>
+        <div className="homepage-about-section">
+            <div className="hp-about-image-wrapper">
+                <img src={truck} alt="940 Air Cargo Trucking" className="hp-about-img"/>
+                <div className="hp-about-experience-badge">
+                    <span className="years">10+</span>
+                    <span className="text">Years of<br/>Excellence</span>
+                </div>
             </div>
-            <div className="the-right-content" >
-                <h2>About us</h2>
-                <h3>What you need to know about us</h3>
-                <p>
-                    We 940 air cargo provides logistical solutions to local Exporters, Importers and International Organizations within Africa and other parts of the world. 
-                    At Kingdom Global Logistics our Word is our Bond, Results Delivered.
+            
+            <div className="hp-about-content">
+                <h4 className="hp-about-subtitle">ABOUT US</h4>
+                <h2 className="hp-about-title">Providing Logistical Solutions Globally</h2>
+                
+                <p className="hp-about-text">
+                    940 Air Cargo provides comprehensive logistical solutions to local Exporters, Importers, and International Organizations within Africa and other parts of the world. 
                 </p>
-                <p>
-                    We subscribe to the philosophy that “Success breeds Success.” 
-                    As our partners succeed, income is increased, value is created and the long term relationship strengthens. We have assisted numerous organizations within this region.
+                <p className="hp-about-text">
+                    The pillar of any company dealing with logistics is the ability to deliver on time with minimal risk of loss. At 940 Air Cargo, <strong>our Word is our Bond, Results Delivered.</strong> We have extensive contacts throughout the region and possess the local knowledge advantage to ensure your business runs smoothly.
                 </p>
-                <p>
-                    We have extensive contacts through out the region and posses the local language advantage to ensure that your business works smoothly.
-                </p>
+                
+                <button className="hp-about-btn" onClick={() => navigate('/about')}>
+                    Learn More About Us
+                </button>
             </div>
         </div>
     )
 }
 
-export default leftimgcontent
+export default Leftimgcontent

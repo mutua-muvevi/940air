@@ -1,0 +1,90 @@
+.terms-page {
+    width: 100%;
+    background-color: var(--bg-main);
+}
+
+.terms-hero {
+    background-color: #001933; /* Darker navy for legal pages */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.terms-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.terms-hero p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.terms-content-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: var(--text-main);
+}
+
+.terms-content-container section {
+    margin-bottom: 50px;
+}
+
+.terms-content-container h2 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 10px;
+}
+
+.term-block {
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--accent-blue);
+}
+
+.term-block h3 {
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.term-block h3:first-child {
+    margin-top: 0;
+}
+
+.term-block p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.term-block strong {
+    color: var(--primary-blue);
+    font-weight: 800;
+}
+
+.term-block ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.term-block li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .terms-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .term-block {
+        padding: 20px;
+    }
+}

@@ -1,19 +1,34 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './navbar.css'
+import LOGO from '../../assets/940-AIR-LOGO.png'
 
-
-const navbar = () => {
+const Navbar = () => {
     return (
         <div className="navbar">
-            <h2 className="navbar-logo">NINE FORTY AIR</h2>
+            <div className="navbar-logo-container">
+                <img src={LOGO} alt="940 Air Cargo Logo" className="navbar-logo-img" />
+                <h2 className="navbar-logo">940 AIR CARGO</h2>
+            </div>
             <ul className="navbar-ul">
-                <Link to='/blogs' className="navbar-li">Blogs</Link>
-                <Link to='/contact' className="navbar-li">Request a quote</Link>
-                <Link to="/customer-resources" className="navbar-li">Customer resources</Link>
+                <li>
+                    <NavLink to="/blogs" className={({ isActive }) => (isActive ? 'navbar-li active' : 'navbar-li')}>
+                        <i className="fas fa-newspaper"></i> <span>Blogs</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/customer-resources" className={({ isActive }) => (isActive ? 'navbar-li active' : 'navbar-li')}>
+                        <i className="fas fa-folder-open"></i> <span>Resources</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/contact" className={({ isActive }) => (isActive ? 'navbar-li active' : 'navbar-li')}>
+                        <i className="fas fa-file-invoice-dollar"></i> <span>Request a Quote</span>
+                    </NavLink>
+                </li>
             </ul>
         </div>
     )
 }
 
-export default navbar
+export default Navbar

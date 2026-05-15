@@ -3,16 +3,19 @@ import './About.css'
 import Mainnav from './../mainnav/Mainnav';
 import Footer from './../main/footer/Footer';
 import AboutBanner from './About banner/AboutBanner';
-import Leftimgcontent from './../main/leftimgcontent/leftimgcontent';
 import SomeQuotes from './SomeQuotes/SomeQuotes';
 import AboutTabs from './AboutTabs/AboutTabs';
+import Leftimgcontent from '../main/leftimgcontent/leftimgcontent';
 
 const About = () => {
     return (
-        <div className="about">
+        <div className="about-page-wrapper">
             <Mainnav/>
             <AboutBanner/>
-            <Leftimgcontent/>
+            <div className="about-content-section">
+                {/* Re-using the modernized Leftimgcontent because it has our newly designed About Us layout */}
+                <Leftimgcontent />
+            </div>
             <SomeQuotes/>
             <AboutTabs/>
             <Footer/>

@@ -8,20 +8,13 @@ const AboutTabwhyus = () => {
                 Why us
             </h2>
             <p className="about-tab-contents-p">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the
-                1500s, when an unknown printer took a galley of type and scrambled it to
-                make a type specimen book. It has survived not only five centuries, but
-                also the leap into electronic typesetting, remaining essentially
-                unchanged. It was popularised in the 1960s with the release of Letraset
-                sheets containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                The pillar of any company that deals with logistics is the ability to deliver on time with minimal risk of loss. At 940 Air Cargo, we leverage our extensive contacts and local knowledge to ensure your business runs smoothly.
             </p>
             <ul>
-                <li>Why us statement 1</li>
-                <li>Why us statement 2</li>
-                <li>Why us statement 3</li>
-                <li>Why us statement 4</li>
+                <li>Expertise in IVF and temperature-sensitive logistics (-180°C).</li>
+                <li>Extensive regional and international network.</li>
+                <li>Local language advantages for seamless operations.</li>
+                <li>Meticulous planning and execution.</li>
             </ul>
         </div>
     )

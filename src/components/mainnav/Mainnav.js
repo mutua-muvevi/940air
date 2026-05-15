@@ -5,21 +5,26 @@ import LOGO from '../../assets/940 air cargo logo.png'
 
 const Mainnav = () => {
     return (
-        <div className="main-nav">
-            <div className="main-nav-logo">
-                <NavLink to="/">
-                 <img className="main-nav-logo-img" src={LOGO} alt="940 air logo"/>
-                </NavLink>
+        <nav className="main-nav-container">
+            <div className="main-nav-inner">
+                <div className="main-nav-logo">
+                    <NavLink to="/">
+                        <img className="main-nav-logo-img" src={LOGO} alt="940 Air Cargo Logo"/>
+                    </NavLink>
+                </div>
+                <div className="main-nav-links">
+                    <ul className="main-nav-ul">
+                        <li><NavLink to="/" className={({ isActive }) => (isActive ? 'main-nav-li active' : 'main-nav-li')}>Home</NavLink></li>
+                        <li><NavLink to="/about" className={({ isActive }) => (isActive ? 'main-nav-li active' : 'main-nav-li')}>About</NavLink></li>
+                        <li><NavLink to="/services" className={({ isActive }) => (isActive ? 'main-nav-li active' : 'main-nav-li')}>Services</NavLink></li>
+                        <li><NavLink to="/contact" className={({ isActive }) => (isActive ? 'main-nav-li active' : 'main-nav-li')}>Contact</NavLink></li>
+                    </ul>
+                </div>
+                <div className="main-nav-quote-btn">
+                    <NavLink to="/contact" className="nav-quote-link">Get a Quote</NavLink>
+                </div>
             </div>
-            <ul className="main-nav-ul">
-                <NavLink to ="/" className="main-nav-li">Home</NavLink><hr/>
-                <NavLink to ="/about" className="main-nav-li">About</NavLink><hr/>
-                <NavLink to ="/air" className="main-nav-li">Air</NavLink><hr/>
-                <NavLink to ="/ground" className="main-nav-li">Ground</NavLink><hr/>
-                <NavLink to ="/contact" className="main-nav-li">Contact</NavLink> <hr/>
-            </ul>
-            
-        </div>
+        </nav>
     )
 }
 

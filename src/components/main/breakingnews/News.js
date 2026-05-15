@@ -7,96 +7,66 @@ import "./News.css"
 
 const News = () => {
     return (
-        <div className="main-news">
-            <div className="main-news-content">
-                <h4 className="main-news-content-h4">940air NEWSROOM</h4>
-                <h2 className="main-news-content-h2">Our Articles</h2>
-                <p className="main-news-content-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the
-                1500s, when an unknown printer took a galley of type and scrambled it to
-                make a type specimen book. It has survived not only five centuries, but
-                also the leap into electronic typesetting, remaining essentially
-                unchanged.</p>
+        <div className="main-news-section">
+            <div className="main-news-header">
+                <h4 className="news-subtitle">940 Air Cargo Newsroom</h4>
+                <h2 className="news-title">Our Articles</h2>
+                <p className="news-description">Stay updated with the latest trends and insights in the logistics and freight forwarding industry. Our experts share their knowledge to help you navigate the complexities of global shipping.</p>
             </div>
-            <div className="main-news-content-body">
-                <div className="main-news-content-body-left">
-                    <img className="main-news-content-body-left-img" src={theTruck} alt="logistics truck"/>
-                    <h4 className="main-news-content-body-left-h4">NEWS ARTICLE</h4>
-                    <h2 className="main-news-content-body-left-h2">The title of the content</h2>
-                    <p className="main-news-content-body-left-date">20-02-2020</p>
-                    <p className="main-news-content-body-left-p">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the
-                        1500s, when an unknown printer took a galley of type and scrambled it to
-                        make a type specimen book. It has survived not only five centuries, but
-                        also the leap into electronic typesetting, remaining essentially
-                        unchanged. It was popularised in the 1960s with the release of Letraset
-                        sheets containing  ...
-                    </p>
+            
+            <div className="news-grid-container">
+                <div className="news-featured-card">
+                    <img className="news-featured-img" src={theTruck} alt="logistics truck"/>
+                    <div className="news-featured-content">
+                        <span className="news-tag">LOGISTICS INSIGHTS</span>
+                        <h3 className="news-card-title">The Science of Temperature-Controlled Logistics</h3>
+                        <span className="news-date">15-05-2026</span>
+                        <p className="news-card-excerpt">
+                            Maintaining a constant temperature of -180°C across continents is no small feat. It requires a blend of advanced technology, meticulous planning, and specialized handling. At 940 Air Cargo, we've mastered this art to ensure...
+                        </p>
+                        <button className="read-more-link">Read full article &#8594;</button>
+                    </div>
                 </div>
-                <div className="main-news-content-body-right">
-                    <div className="main-news-content-body-right-cards">
-                        <hr/>
-                        <div className="main-news-content-body-right-single-card">
-                            <img className="main-news-content-body-right-single-card-img" 
-                                src={harborOne} alt="harbor one"/>
-                            <div className="main-news-content-body-right-single-card-content">
-                                <h2 className="main-news-content-body-right-single-card-content-h2">
-                                    Some Content here
-                                </h2>
-                                <p className="main-news-content-body-right-single-card-content-date">
-                                    20-02-2019
-                                </p>
-                                <p className="main-news-content-body-right-single-card-content-p">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the
-                                    ...
-                                </p>
-                            </div>
+                
+                <div className="news-side-list">
+                    <div className="news-list-item">
+                        <img className="news-list-img" src={harborOne} alt="harbor one"/>
+                        <div className="news-list-content">
+                            <h4 className="news-list-title">Expanding our Reach in East Africa</h4>
+                            <span className="news-date">10-04-2026</span>
+                            <p className="news-list-excerpt">
+                                We are proud to announce the opening of our new distribution hubs...
+                            </p>
                         </div>
+                    </div>
 
-                        <hr/>
-                        <div className="main-news-content-body-right-single-card">
-                            <img className="main-news-content-body-right-single-card-img" 
-                                src={harborTwo} alt="harbor one"/>
-                            <div className="main-news-content-body-right-single-card-content">
-                                <h2 className="main-news-content-body-right-single-card-content-h2">
-                                    Some Content here
-                                </h2>
-                                <p className="main-news-content-body-right-single-card-content-date">
-                                    20-02-2019
-                                </p>
-                                <p className="main-news-content-body-right-single-card-content-p">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the
-                                    ...
-                                </p>
-                            </div>
+                    <div className="news-list-item">
+                        <img className="news-list-img" src={harborTwo} alt="harbor one"/>
+                        <div className="news-list-content">
+                            <h4 className="news-list-title">Chargeable Weight Explained</h4>
+                            <span className="news-date">22-03-2026</span>
+                            <p className="news-list-excerpt">
+                                Understanding how freight costs are calculated can save your business...
+                            </p>
                         </div>
+                    </div>
 
-                        <hr/>
-                        <div className="main-news-content-body-right-single-card">
-                            <img className="main-news-content-body-right-single-card-img" 
-                                src={harborThree} alt="harbor one"/>
-                            <div className="main-news-content-body-right-single-card-content">
-                                <h2 className="main-news-content-body-right-single-card-content-h2">
-                                    Some Content here
-                                </h2>
-                                <p className="main-news-content-body-right-single-card-content-date">
-                                    20-02-2019
-                                </p>
-                                <p className="main-news-content-body-right-single-card-content-p">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the
-                                    ...
-                                </p>
-                            </div>
+                    <div className="news-list-item">
+                        <img className="news-list-img" src={harborThree} alt="harbor one"/>
+                        <div className="news-list-content">
+                            <h4 className="news-list-title">Sustainable Shipping Solutions</h4>
+                            <span className="news-date">05-02-2026</span>
+                            <p className="news-list-excerpt">
+                                At 940 Air Cargo, we are committed to reducing our carbon footprint...
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr/>
-            <button className="news-section-button">See all articles</button>
+            
+            <div className="news-footer-action">
+                <button className="btn-primary">View All Articles</button>
+            </div>
         </div>
     )
 }

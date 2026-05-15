@@ -1,7 +1,7 @@
 import React from 'react'
 import './main.css'
 import Footer from './footer/Footer';
-import Banner from './banner/banner';
+import BannerCarousel from './banner/banner';
 import Leftimgcontent from './leftimgcontent/leftimgcontent';
 import Fiveimages from './fiveimages.js/fiveimages';
 import BackgroundImage from './backgroundimage/BackgroundImage';
@@ -14,7 +14,7 @@ const main = () => {
     return (
         <div className="main_content">
             <Mainnav/>
-            <Banner/>
+            <BannerCarousel/>
             <Leftimgcontent/>
             <Fiveimages/>
             <Carousel/>

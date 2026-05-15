@@ -1,34 +1,131 @@
-.leftimgcontent{
+.homepage-about-section {
     display: flex;
-    width: 80%;
-    margin: auto;
+    align-items: center;
+    max-width: var(--container-max);
+    margin: 80px auto;
+    padding: 0 20px;
+    gap: 60px;
+}
+
+.hp-about-image-wrapper {
+    width: 50%;
+    position: relative;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.hp-about-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    display: block;
+}
+
+.hp-about-experience-badge {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    background-color: var(--accent-red);
+    color: white;
+    padding: 30px;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border: 8px solid white;
 }
 
-
-
-.the-left-img{
-    width: 45%;
-    overflow: hidden;
-    transition: transform .5s ease;
+.hp-about-experience-badge .years {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
 }
 
-
-.content-section-image{
-    width: 100% !important;
-    overflow: hidden;
+.hp-about-experience-badge .text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.the-right-content{
-    width: 55%;
-    padding: 0px 20px;
-    font-family: 'PT Sans', sans-serif;
+.hp-about-content {
+    width: 50%;
+    padding-right: 20px;
 }
 
-@media (max-width: 800px){
-    .leftimgcontent{
-        display: flex;
+.hp-about-subtitle {
+    color: var(--accent-red);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hp-about-title {
+    font-size: 2.8rem;
+    color: var(--primary-blue);
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.hp-about-text {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.hp-about-text strong {
+    color: var(--primary-blue);
+}
+
+.hp-about-btn {
+    margin-top: 20px;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color var(--transition-normal), transform var(--transition-fast);
+}
+
+.hp-about-btn:hover {
+    background-color: var(--secondary-blue);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+    .homepage-about-section {
         flex-direction: column;
+        gap: 40px;
+        margin: 50px auto 80px;
+    }
+
+    .hp-about-image-wrapper {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hp-about-experience-badge {
+        right: 20px;
+        bottom: -20px;
+    }
+
+    .hp-about-content {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .hp-about-title {
+        font-size: 2.2rem;
     }
 }

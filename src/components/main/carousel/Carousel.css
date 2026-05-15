@@ -1,65 +1,107 @@
-.carousel{
+.sectors-carousel-container {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 60px 20px;
+    background-color: #f4f7f6;
 }
-.carousel-content{
+
+.carousel-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-bottom: 40px;
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
-.carousel-cards{
-    display: flex;
-    width: 100%;
-    margin: auto;
-    justify-content: center;
-    flex-wrap: wrap;
-    
+.carousel-h2 {
+    color: #021d49;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
 }
 
-.carousel-single-card{
-    width: 320px;
-    height: 280px;
-    overflow: hidden;
-    margin-top: 10px;
+.carousel-p {
+    color: #666;
+    font-size: 1.1rem;
 }
 
-.carousel-image-text{
+.carousel-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel-single-card {
     position: relative;
-    top: -60px;
-    left: 20px;
-    text-decoration: none !important;
-    color: red;
-    
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.carousel-image{
-    width: 320px;
-    height: 280px;
-    margin-left: 15px;
-    border-radius: 5px;
-    filter: drop-shadow(3px 10px 10px #d0d0d3);
-    
-}
-.carousel-button-div{
-    width: 85%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
-.carousel-button{
-    margin-top: 20px;
-    width: 150px;
-    height: 30px;
-    background-color: #202c62;
+.carousel-single-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.carousel-single-card:hover .carousel-image {
+    transform: scale(1.1);
+}
+
+.carousel-image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px 20px;
+    background: linear-gradient(to top, rgba(2, 29, 73, 0.95), transparent);
     color: white;
-    justify-self: center;
-    border: none;;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.carousel-image-text-h2 {
+    font-size: 1.8rem;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.find-out-more {
+    font-size: 1rem;
+    color: #4da6ff;
+    font-weight: 600;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.carousel-single-card:hover .find-out-more {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .sectors-carousel-container {
+        padding: 40px 20px;
+    }
+    
+    .carousel-h2 {
+        font-size: 2rem;
+    }
+    
+    .carousel-single-card {
+        height: 300px;
+    }
 }

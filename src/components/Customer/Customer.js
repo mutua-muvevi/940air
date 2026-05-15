@@ -6,7 +6,7 @@ import Cresourse from './customer resources/Cresourse';
 
 const Customer = () => {
     return (
-        <div className="customer">
+        <div className="customer-page-wrapper">
             <Mainnav/>
             <Cresourse/>
             <Footer/>

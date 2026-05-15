@@ -6,26 +6,47 @@ import container from "../../../assets/container.jpg"
 import shipping from "../../../assets/shipping.jpg"
 import planes from "../../../assets/model-planes-1566822_1920.jpg"
 
-
-const fiveimages = () => {
+const Fiveimages = () => {
     return (
         <div className="five-images">
             <div className="five-images-left">
-                <img className="five-images-left-img" src={container} alt="some text"/>
+                <img className="five-images-left-img" src={container} alt="Container Shipping"/>
+                <div className="mosaic-overlay">
+                    <h3>Door to Door</h3>
+                </div>
             </div>
             <div className="five-images-right">
                 <div className='five-image-fragmentation'>
-                    <img className="five-images-right-img" src={truck} alt="sometext"/>
-                    <img className="five-images-right-img" src={heli} alt="sometext"/>
+                    <div className="mosaic-wrapper">
+                        <img className="five-images-right-img" src={truck} alt="Trucking"/>
+                        <div className="mosaic-overlay">
+                            <h3>Trucking</h3>
+                        </div>
+                    </div>
+                    <div className="mosaic-wrapper">
+                        <img className="five-images-right-img" src={heli} alt="Air Transport"/>
+                        <div className="mosaic-overlay">
+                            <h3>Express Cargo</h3>
+                        </div>
+                    </div>
                 </div>
                 <div className='five-image-fragmentation'>
-                    <img className="five-images-right-img" src={shipping} alt="sometext"/>
-                    <img className="five-images-right-img" src={planes} alt="sometext"/>
+                    <div className="mosaic-wrapper">
+                        <img className="five-images-right-img" src={shipping} alt="Sea Shipping"/>
+                        <div className="mosaic-overlay">
+                            <h3>Sea Freight</h3>
+                        </div>
+                    </div>
+                    <div className="mosaic-wrapper">
+                        <img className="five-images-right-img" src={planes} alt="Planes"/>
+                        <div className="mosaic-overlay">
+                            <h3>Air Freight</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
     )
 }
 
-export default fiveimages
+export default Fiveimages

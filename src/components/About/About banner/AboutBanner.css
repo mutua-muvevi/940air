@@ -1,20 +1,64 @@
-.about-banner{
+.about-banner-section {
     height: 55vh;
-    background-image: linear-gradient(to bottom, rgba(2, 12, 70, 0.363), rgba(17, 8, 102, 0.582)),url(../../../assets/about.jpg);
+    min-height: 400px;
+    background-image: url(../../../assets/about.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     background-attachment: fixed;
-    color: white;
+    position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.about-banner-content{
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+.about-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(2, 29, 73, 0.85), rgba(2, 29, 73, 0.4));
+    z-index: 1;
+}
+
+.about-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.about-banner-subtitle {
+    color: var(--accent-red);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.about-banner-title {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.about-banner-text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .about-banner-title {
+        font-size: 2.5rem;
+    }
+    .about-banner-text {
+        font-size: 1.1rem;
+    }
 }

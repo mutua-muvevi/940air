@@ -1,4 +1,9 @@
-.about{
-    width: 88%;
-    margin-left: 12%;
-  }
+.about-page-wrapper {
+    width: 100%;
+    background-color: var(--bg-main);
+}
+
+.about-content-section {
+    /* Wrapping Leftimgcontent so we can manage spacing around it */
+    padding-bottom: 40px;
+}

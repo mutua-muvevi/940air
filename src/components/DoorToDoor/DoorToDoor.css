@@ -1,0 +1,28 @@
+.door-to-door {
+    width: 88%;
+    margin-left: 12%;
+}
+
+.door-to-door h2 {
+    color: #004a99;
+    padding: 30px 20px 10px 20px;
+    margin: 0;
+}
+
+.door-to-door .service-details {
+    padding: 0 20px 40px 20px;
+}
+
+.door-to-door .service-details p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .door-to-door {
+        width: 100%;
+        margin-left: 0;
+    }
+}

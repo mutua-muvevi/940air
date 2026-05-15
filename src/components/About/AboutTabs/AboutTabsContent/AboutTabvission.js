@@ -8,20 +8,13 @@ const AboutTabvission = () => {
                 Our vision
             </h2>
             <p className="about-tab-contents-p">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the
-                1500s, when an unknown printer took a galley of type and scrambled it to
-                make a type specimen book. It has survived not only five centuries, but
-                also the leap into electronic typesetting, remaining essentially
-                unchanged. It was popularised in the 1960s with the release of Letraset
-                sheets containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Our vision is to be the pillar of reliability in the logistics industry. We aim to set the standard for time-sensitive and high-stakes logistics, ensuring minimal risk and maximum efficiency for all our clients across the globe.
             </p>
             <ul>
-                <li>Vision statement 1</li>
-                <li>Vision statement 2</li>
-                <li>Vision statement 3</li>
-                <li>Vision statement 4</li>
+                <li>Global reach with local expertise.</li>
+                <li>Innovation in temperature-controlled logistics.</li>
+                <li>Excellence in freight forwarding.</li>
+                <li>Customer-centric logistical solutions.</li>
             </ul>
         </div>
     )

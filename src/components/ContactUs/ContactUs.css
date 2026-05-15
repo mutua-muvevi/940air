@@ -1,4 +1,133 @@
 .contact-us{
     margin-left: 12%;
     width: 88%;
+    background-color: #f9f9f9;
+}
+
+.contact-us-banner {
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.contact-us-banner-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.contact-us-banner-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.contact-container {
+    display: flex;
+    max-width: 1200px;
+    margin: -50px auto 50px;
+    padding: 0 20px;
+    gap: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.contact-info-card {
+    flex: 1;
+    background: #004a99;
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-info-card h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    margin-top: 5px;
+    color: #4da6ff;
+}
+
+.info-item strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    margin: 0;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+.office-hours {
+    margin-top: 40px;
+}
+
+.office-hours h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.office-hours ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.office-hours li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 5px;
+    color: #e0e0e0;
+}
+
+.contact-form-wrapper {
+    flex: 2;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 40px;
+}
+
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-us {
+        width: 100%;
+        margin-left: 0;
+    }
+    .contact-us-banner h2 {
+        font-size: 2.5rem;
+    }
+    .contact-info-card, .contact-form-wrapper {
+        padding: 20px;
+    }
 }
