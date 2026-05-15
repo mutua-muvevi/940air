@@ -6,7 +6,7 @@ import './User.css'
 import UserLogin from './UserLogin/UserLogin';
 
 const User = () => {
-
+    // eslint-disable-next-line no-unused-vars
     const [loggedIn, setLoggedIn] = useState(false)
 
     return (

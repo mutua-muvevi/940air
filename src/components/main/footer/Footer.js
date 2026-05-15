@@ -48,10 +48,10 @@ const Footer = () => {
                     
                     <h3 className="social-title">Follow Us</h3>
                     <div className="social-icons">
-                        <a href="#" onClick={(e) => e.preventDefault()} className="social-btn"><i className="fab fa-facebook-f"></i></a>
-                        <a href="#" onClick={(e) => e.preventDefault()} className="social-btn"><i className="fab fa-twitter"></i></a>
-                        <a href="#" onClick={(e) => e.preventDefault()} className="social-btn"><i className="fab fa-linkedin-in"></i></a>
-                        <a href="#" onClick={(e) => e.preventDefault()} className="social-btn"><i className="fab fa-instagram"></i></a>
+                        <a href="#!" onClick={(e) => e.preventDefault()} className="social-btn"><i className="fab fa-facebook-f"></i></a>
+                        <a href="#!" onClick={(e) => e.preventDefault()} className="social-btn"><i className="fab fa-twitter"></i></a>
+                        <a href="#!" onClick={(e) => e.preventDefault()} className="social-btn"><i className="fab fa-linkedin-in"></i></a>
+                        <a href="#!" onClick={(e) => e.preventDefault()} className="social-btn"><i className="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
