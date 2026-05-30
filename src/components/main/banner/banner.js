@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useNavigate } from 'react-router-dom';
@@ -10,8 +10,6 @@ import slide3 from '../../../assets/IMG-20260321-WA0020.jpg'
 import slide4 from '../../../assets/IMG-20260211-WA0046.jpg'
 import slide5 from '../../../assets/IMG-20260211-WA0050.jpg'
 import slide6 from '../../../assets/IMG-20260211-WA0087.jpg'
-import bannerVideo1 from '../../../assets/VID-20260317-WA0002.mp4'
-import bannerVideo2 from '../../../assets/VID-20260211-WA0079.mp4'
 
 const BannerCarousel = () => {
     const navigate = useNavigate();
@@ -22,19 +20,25 @@ const BannerCarousel = () => {
     const videoRef2 = useRef(null);
     const videoBgRef = useRef(null);
 
-    // Robust play handler to avoid "play() interrupted" errors
-    const safePlay = async (videoElement) => {
-        if (videoElement && videoElement.paused) {
+    const bannerVideo1 = "https://res.cloudinary.com/dqweh6zte/video/upload/v1780134220/VID-20260317-WA0002_lo41e8.mp4";
+    const bannerVideo2 = "https://res.cloudinary.com/dqweh6zte/video/upload/v1780134223/VID-20260211-WA0079_lx1mez.mp4";
+
+    const safePlay = useCallback(async (videoElement) => {
+        if (videoElement) {
+            videoElement.muted = true;
             try {
                 await videoElement.play();
             } catch (error) {
-                // Ignore AbortError which happens when pause() interrupts play()
                 if (error.name !== 'AbortError') {
                     console.warn("Video playback failed:", error);
+                    // Fallback: try playing again after a short delay
+                    setTimeout(() => {
+                        videoElement.play().catch(() => {});
+                    }, 1000);
                 }
             }
         }
-    };
+    }, []);
 
     const handleVideoEnd = () => {
         const nextIndex = currentIndex + 1;
@@ -47,7 +51,7 @@ const BannerCarousel = () => {
     };
 
     useEffect(() => {
-        // Handle playback logic based on current index
+        // Precise playback management based on slide index
         if (currentIndex === 0) {
             setIsAutoPlay(false);
             if (videoRef1.current) {
@@ -73,7 +77,19 @@ const BannerCarousel = () => {
             if (videoRef2.current) videoRef2.current.pause();
             if (videoBgRef.current) videoBgRef.current.pause();
         }
-    }, [currentIndex]);
+    }, [currentIndex, safePlay]);
+
+    // Extra trigger for the very first load
+    useEffect(() => {
+        const initialTrigger = setInterval(() => {
+            if (currentIndex === 0 && videoRef1.current && videoRef1.current.paused) {
+                safePlay(videoRef1.current);
+            } else if (currentIndex === 0 && videoRef1.current && !videoRef1.current.paused) {
+                clearInterval(initialTrigger);
+            }
+        }, 1000);
+        return () => clearInterval(initialTrigger);
+    }, [currentIndex, safePlay]);
 
     return (
         <div className="main-banner-carousel">
@@ -81,7 +97,7 @@ const BannerCarousel = () => {
                 selectedItem={currentIndex}
                 onChange={handleChange}
                 autoPlay={isAutoPlay}
-                infiniteLoop 
+                infiniteLoop={true}
                 showThumbs={false} 
                 showStatus={false}
                 interval={5000}
@@ -94,11 +110,14 @@ const BannerCarousel = () => {
                 <div className="slide-container">
                     <video 
                         ref={videoRef1}
+                        key="video-landscape"
                         src={bannerVideo1} 
-                        muted 
-                        playsInline
+                        muted={true}
+                        playsInline={true}
+                        autoPlay={true}
                         className="slide-image" 
                         onEnded={handleVideoEnd}
+                        onCanPlay={() => currentIndex === 0 && safePlay(videoRef1.current)}
                     />
                     <div className="slide-overlay">
                         <div className="slide-content">
@@ -115,26 +134,22 @@ const BannerCarousel = () => {
                         <video 
                             ref={videoBgRef}
                             src={bannerVideo2} 
-                            muted 
-                            playsInline
+                            muted={true}
+                            playsInline={true}
+                            autoPlay={true}
                             className="video-bg-blur"
-                            loop
+                            loop={true}
                         />
                         <video 
                             ref={videoRef2}
+                            key="video-portrait"
                             src={bannerVideo2} 
-                            muted 
-                            playsInline
+                            muted={true}
+                            playsInline={true}
+                            autoPlay={true}
                             className="video-foreground" 
                             onEnded={handleVideoEnd}
                         />
-                    </div>
-                    <div className="slide-overlay">
-                        <div className="slide-content">
-                            <h2>Precision Handling</h2>
-                            <p>Care and attention for every piece of cargo, big or small.</p>
-                            <button className="slide-btn" onClick={() => navigate('/services')}>View Services</button>
-                        </div>
                     </div>
                 </div>
 

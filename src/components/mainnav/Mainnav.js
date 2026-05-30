@@ -9,7 +9,9 @@ const Mainnav = () => {
             <div className="main-nav-inner">
                 <div className="main-nav-logo">
                     <NavLink to="/">
-                        <img className="main-nav-logo-img" src={LOGO} alt="940 Air Cargo Logo"/>
+                        <div className="main-nav-logo-box">
+                            <img className="main-nav-logo-img" src={LOGO} alt="940 Air Cargo Logo"/>
+                        </div>
                     </NavLink>
                 </div>
                 <div className="main-nav-links">

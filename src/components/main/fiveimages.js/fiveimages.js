@@ -1,16 +1,16 @@
 import React from 'react'
 import './fiveimages.css'
 import truck from "../../../assets/truck-460432_1920.jpg"
-import heli from "../../../assets/new-zealand-2998846_1920.jpg"
-import container from "../../../assets/container.jpg"
+import expressImg from "../../../assets/IMG-20260321-WA0020.jpg"
+import doorToDoorImg from "../../../assets/IMG-20260211-WA0046.jpg"
 import shipping from "../../../assets/shipping.jpg"
-import planes from "../../../assets/model-planes-1566822_1920.jpg"
+import airFreightImg from "../../../assets/IMG-20260211-WA0087.jpg"
 
 const Fiveimages = () => {
     return (
         <div className="five-images">
             <div className="five-images-left">
-                <img className="five-images-left-img" src={container} alt="Container Shipping"/>
+                <img className="five-images-left-img" src={doorToDoorImg} alt="Door to Door"/>
                 <div className="mosaic-overlay">
                     <h3>Door to Door</h3>
                 </div>
@@ -24,7 +24,7 @@ const Fiveimages = () => {
                         </div>
                     </div>
                     <div className="mosaic-wrapper">
-                        <img className="five-images-right-img" src={heli} alt="Air Transport"/>
+                        <img className="five-images-right-img" src={expressImg} alt="Express Cargo"/>
                         <div className="mosaic-overlay">
                             <h3>Express Cargo</h3>
                         </div>
@@ -38,7 +38,7 @@ const Fiveimages = () => {
                         </div>
                     </div>
                     <div className="mosaic-wrapper">
-                        <img className="five-images-right-img" src={planes} alt="Planes"/>
+                        <img className="five-images-right-img" src={airFreightImg} alt="Air Freight"/>
                         <div className="mosaic-overlay">
                             <h3>Air Freight</h3>
                         </div>

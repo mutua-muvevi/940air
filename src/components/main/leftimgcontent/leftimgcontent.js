@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import "./leftimgcontent.css"
-import truck from '../../../assets/truck-460432_1920.jpg'
+import aboutImg from '../../../assets/IMG-20260211-WA0046.jpg'
 
 const Leftimgcontent = () => {
     const navigate = useNavigate();
@@ -9,7 +9,7 @@ const Leftimgcontent = () => {
     return (
         <div className="homepage-about-section">
             <div className="hp-about-image-wrapper">
-                <img src={truck} alt="940 Air Cargo Trucking" className="hp-about-img"/>
+                <img src={aboutImg} alt="940 Air Cargo Logistics" className="hp-about-img"/>
                 <div className="hp-about-experience-badge">
                     <span className="years">10+</span>
                     <span className="text">Years of<br/>Excellence</span>

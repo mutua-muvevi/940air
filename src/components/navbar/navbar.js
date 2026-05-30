@@ -1,13 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './navbar.css'
-import LOGO from '../../assets/940-AIR-LOGO.png'
+import LOGO from '../../assets/940 air cargo logo.png'
 
 const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navbar-logo-container">
-                <img src={LOGO} alt="940 Air Cargo Logo" className="navbar-logo-img" />
+                <div className="logo-box">
+                    <img src={LOGO} alt="940 Air Cargo Logo" className="navbar-logo-img" />
+                </div>
                 <h2 className="navbar-logo">940 AIR CARGO</h2>
             </div>
             <ul className="navbar-ul">

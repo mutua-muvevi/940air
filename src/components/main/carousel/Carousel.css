@@ -76,11 +76,12 @@
     font-size: 1.8rem;
     margin: 0 0 5px 0;
     font-weight: 700;
+    color: white
 }
 
 .find-out-more {
     font-size: 1rem;
-    color: #4da6ff;
+    color: #6fb6fd;
     font-weight: 600;
     transform: translateY(20px);
     opacity: 0;

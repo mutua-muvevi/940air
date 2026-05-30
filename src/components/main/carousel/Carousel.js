@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Carousel.css"
-import planes from "../../../assets/air-kenya.jpg"
-import truck from "../../../assets/truck.jpg"
+import airFreightImg from "../../../assets/IMG-20260211-WA0087.jpg"
+import truck from "../../../assets/truck-460432_1920.jpg"
 import ship from "../../../assets/ship.jpg"
-import van from "../../../assets/container.jpg"
+import doorToDoorImg from "../../../assets/IMG-20260321-WA0020.jpg"
 import { Link } from 'react-router-dom';
 
 const Carousel = () => {
@@ -24,7 +24,7 @@ const Carousel = () => {
                 </Link>
 
                 <Link to="/services/air-freight" className="carousel-single-card">
-                    <img className="carousel-image" src={planes} alt="Air Freight"/>
+                    <img className="carousel-image" src={airFreightImg} alt="Air Freight"/>
                     <div className="carousel-image-text">
                         <h2 className="carousel-image-text-h2">Air Freight</h2>
                         <span className="find-out-more">Find out more &#8594;</span>
@@ -40,7 +40,7 @@ const Carousel = () => {
                 </Link>
 
                 <Link to="/services/door-to-door" className="carousel-single-card">
-                    <img className="carousel-image" src={van} alt="Door to Door"/>
+                    <img className="carousel-image" src={doorToDoorImg} alt="Door to Door"/>
                     <div className="carousel-image-text">
                         <h2 className="carousel-image-text-h2">Door to Door</h2>
                         <span className="find-out-more">Find out more &#8594;</span>

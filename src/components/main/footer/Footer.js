@@ -1,14 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './footer.css'
-import logo from '../../../assets/940-AIR-LOGO.png'
+import logo from '../../../assets/940 air cargo logo.png'
 
 const Footer = () => {
     return (
         <footer className="footer-section">
             <div className="footer-container">
                 <div className="footer-col company-info">
-                    <img className="footer-logo-img" src={logo} alt='940 Air Cargo Logo'/>
+                    <div className="footer-logo-box">
+                        <img className="footer-logo-img" src={logo} alt='940 Air Cargo Logo'/>
+                    </div>
                     <p>940 Air Cargo provides logistical solutions to local exporters, importers, and international organizations. Big to Deliver, Small to Listen.</p>
                     <div className="footer-contact">
                         <p><i className="fas fa-map-marker-alt"></i> JKIA Cargo Village, Nairobi</p>
@@ -50,7 +52,7 @@ const Footer = () => {
                     <div className="social-icons">
                         <a href="#!" onClick={(e) => e.preventDefault()} className="social-btn"><i className="fab fa-facebook-f"></i></a>
                         <a href="#!" onClick={(e) => e.preventDefault()} className="social-btn"><i className="fab fa-twitter"></i></a>
-                        <a href="#!" onClick={(e) => e.preventDefault()} className="social-btn"><i className="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/company/nine-forty-air-cargo-limited/" target="_blank" rel="noopener noreferrer" className="social-btn"><i className="fab fa-linkedin-in"></i></a>
                         <a href="#!" onClick={(e) => e.preventDefault()} className="social-btn"><i className="fab fa-instagram"></i></a>
                     </div>
                 </div>
