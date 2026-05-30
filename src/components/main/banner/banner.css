@@ -123,3 +123,35 @@
         font-size: 1rem;
     }
 }
+
+/* Portrait Video Handling */
+.portrait-video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-bg-blur {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(25px) brightness(0.4);
+    pointer-events: none;
+}
+
+.video-foreground {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
